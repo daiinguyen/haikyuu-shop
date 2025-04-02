@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_spinbox/material.dart';
 import 'package:haikyuushop/utils/cart.dart';
 import 'package:haikyuushop/utils/item.dart';
 import 'package:provider/provider.dart';
@@ -70,24 +69,9 @@ class _ItemCartState extends State<ItemCart> {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 IconButton(onPressed: removeItem, icon: Icon(Icons.close)),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.3),
-                    borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(20),
-                      topLeft: Radius.circular(20),
-                    ),
-                  ),
-                  width: 70,
-                  height: 30,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text('-'),
-                      Text(widget.item.itemCount.toString()),
-                      Text('+'),
-                    ],
-                  ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 10, bottom: 10),
+                  child: Text('Quantity: ${widget.item.itemCount}'),
                 ),
               ],
             ),

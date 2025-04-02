@@ -46,7 +46,6 @@ class CartPage extends StatelessWidget {
                 return ItemCart(item: item);
               },
             ),
-
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
